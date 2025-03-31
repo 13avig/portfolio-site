@@ -13,12 +13,12 @@ export default function Home() {
               <div className="flex flex-col items-start mb-4 sm:mb-4">
                 <div className="flex flex-row items-center justify-between w-full">
                   <div className="flex items-center h-[40px]">
-                    <div className="text-4xl font-thin patriot-bold">AP</div>
+                    <div className="text-4xl font-thin patriot-bold">ag</div>
                   </div>
                   <div className="flex flex-col items-end gap-0">
                     <div className="h-[20px]">
                       <p className="text-sm font-bold leading-relaxed tracking-wider text-foreground">
-                        Awesome to see you
+                        Berkeley, CA
                       </p>
                     </div>
                     <div className="h-[20px] flex items-center">
@@ -38,11 +38,11 @@ export default function Home() {
                 </div>
               </div>
               <p className="mb-4">
-                I spend a lot of my time tinkering and building new ideas I find interesting.
+                I spend my time coding, learning, and thinking about the political and economic state of the world.
               </p>
 
               <p className="mb-4">
-                I'm also the first growth engineer at{' '}
+                Currently at UC Berkeley studying computer science{' '}
                 <a
                   href="https://www.browserbase.com/"
                   className="mb-4 text-accent link-with-animation"
@@ -54,29 +54,24 @@ export default function Home() {
               <p className="mb-4">
                 Feel free to{' '}
                 <a
-                  href="https://x.com/alexdphan"
+                  href="https://x.com/forchaud"
+                  target="_blank"
                   className="mb-4 text-accent link-with-animation"
                 >
-                  DM
+                  reach out
                 </a>{' '}
                 if you'd like to chat!
               </p>
-              <p className="mb-4">Past Events:</p>
+              <p className="mb-4">Past:</p>
               <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
                 <li className="mb-2">
+                Reinforcement Learning under Sergey Levine at {' '}
                   <a
-                    href="https://www.outliers.build/"
+                    href="https://rail.eecs.berkeley.edu/"
                     className="mb-4 text-accent link-with-animation"
                   >
-                    Outlier Fellow
+                    RAIL
                   </a>{' '}
-                  at{' '}
-                  <a
-                    href="https://www.floodgate.com/"
-                    className="mb-4 text-accent link-with-animation"
-                  >
-                    Floodgate
-                  </a>
                 </li>
                 <li className="mb-2">
                   <a

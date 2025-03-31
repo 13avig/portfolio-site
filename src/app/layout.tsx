@@ -2,8 +2,8 @@ import "@/app/globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Alex Phan",
-  description: "Alex Phan's personal website",
+  title: "Avi Gupta",
+  description: "Avi Gupta's personal website",
   icons: {
     icon: '/favicon.ico',
   },

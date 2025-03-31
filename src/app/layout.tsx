@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Avi Gupta",
   description: "Avi Gupta's personal website",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
 };
 

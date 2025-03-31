@@ -1,6 +1,35 @@
+"use client";
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+function Clock() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <time className="text-sm text-secondary">
+      <p className="inline">{time.toISOString().split('T')[0]}</p>{' '}
+      <p className="inline">{String(time.getHours()).padStart(2, '0')}</p>
+      <p className="inline">:</p>
+      <p className="inline">{String(time.getMinutes()).padStart(2, '0')}</p>
+      <p className="inline">:</p>
+      <p className="inline">
+        {String(time.getSeconds()).padStart(2, '0')}
+        <span className="dud"></span>
+      </p>
+    </time>
+  );
+}
 
 export default function Home() {
   return (
@@ -22,34 +51,17 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="h-[20px] flex items-center">
-                      <time className="text-sm text-secondary">
-                        <p className="inline">{new Date().toISOString().split('T')[0]}</p>{' '}
-                        <p className="inline">{String(new Date().getHours()).padStart(2, '0')}</p>
-                        <p className="inline">:</p>
-                        <p className="inline">{String(new Date().getMinutes()).padStart(2, '0')}</p>
-                        <p className="inline">:</p>
-                        <p className="inline">
-                          {String(new Date().getSeconds()).padStart(2, '0')}
-                          <span className="dud">_</span>
-                        </p>
-                      </time>
+                      <Clock />
                     </div>
                   </div>
                 </div>
               </div>
               <p className="mb-4">
-                I spend my time coding, learning, and thinking about the political and economic state of the world.
+                I spend my time solving puzzles and thinking about the political and economic state of the world.
               </p>
 
               <p className="mb-4">
-                Currently at UC Berkeley studying computer science{' '}
-                <a
-                  href="https://www.browserbase.com/"
-                  className="mb-4 text-accent link-with-animation"
-                >
-                  Browserbase
-                </a>
-                , an exciting startup in San Francisco.
+                Currently at UC Berkeley studying Computer Science.{' '}
               </p>
               <p className="mb-4">
                 Feel free to{' '}
@@ -58,44 +70,84 @@ export default function Home() {
                   target="_blank"
                   className="mb-4 text-accent link-with-animation"
                 >
-                  reach out
+                  reach out!
                 </a>{' '}
-                if you'd like to chat!
               </p>
               <p className="mb-4">Past:</p>
               <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+              <li className="mb-2">
+                Software Development Engineering at {' '}
+                  <a
+                    href="https://aws.amazon.com/rds/"
+                    target="_blank"
+                    className="mb-4 text-accent link-with-animation"
+                  >
+                    Amazon RDS
+                  </a>{' '}
+                </li>
                 <li className="mb-2">
-                Reinforcement Learning under Sergey Levine at {' '}
+                Reinforcement Learning under {' '}
+                <a
+                    href="https://people.eecs.berkeley.edu/~svlevine/"
+                    target="_blank"
+                    className="mb-4 text-accent link-with-animation"
+                  >
+                    Sergey Levine
+                  </a>{' '}
+                at {' '}
                   <a
                     href="https://rail.eecs.berkeley.edu/"
+                    target="_blank"
                     className="mb-4 text-accent link-with-animation"
                   >
                     RAIL
                   </a>{' '}
                 </li>
                 <li className="mb-2">
+                  Short Stature Genomics under {' '}
                   <a
-                    href="https://blog.celestia.org/introducing-modular-fellows/"
+                    href="https://www.broadinstitute.org/bios/joel-hirschhorn"
+                    target="_blank"
                     className="mb-4 text-accent link-with-animation"
                   >
-                    Modular Fellow
+                    Joel Hirschhorn
                   </a>{' '}
-                  at{' '}
+                  at {' '}
                   <a
-                    href="https://celestia.org/"
+                    href="https://www.broadinstitute.org/"
+                    target="_blank"
                     className="mb-4 text-accent link-with-animation"
                   >
-                    Celestia
+                    Broad Institute
                   </a>
                 </li>
+              </ul>
+              <ul style={{ listStyleType: 'disc', marginLeft: '20px', marginBottom: '1.2rem' }}>
                 <li className="mb-2">
-                  First Analyst at{' '}
+                  Voice Recognition & Speech Therapy at {''}
                   <a
-                    href="https://www.alchemy.com/"
+                    href="https://spokeitthegame.com/"
+                    target="_blank"
                     className="mb-4 text-accent link-with-animation"
                   >
-                    Alchemy
+                    SpokeIt
                   </a>
+                </li>
+              </ul>
+              <p className="mb-4">Personal:</p>
+              <ul style={{ listStyleType: 'disc', marginLeft: '20px' }}>
+                <li className="mb-2">
+                Pro-bono College Counseling at {' '}
+                  <a
+                    href="https://peeradmit.com/"
+                    target="_blank"
+                    className="mb-4 text-accent link-with-animation"
+                  >
+                    Peer Admit
+                  </a>{' '}
+                </li>
+                <li className="mb-2">
+                  Artificial Intelligence for Clinical Trials at GWS
                 </li>
               </ul>
             </article>

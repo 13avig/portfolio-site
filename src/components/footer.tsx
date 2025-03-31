@@ -1,0 +1,32 @@
+import Link from 'next/link';
+
+export function Footer() {
+  return (
+    <div className="flex items-center justify-center">
+      <footer style={{ marginTop: 'auto' }} className="flex py-8 pt-8">
+        <div style={{ opacity: 1 }}>
+          <Link href="https://twitter.com/alexdphan">
+            <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 text-muted-foreground link-with-animation">
+              <span className="text-secondary">X</span>
+            </button>
+          </Link>
+          <Link href="https://github.com/alexdphan">
+            <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 text-muted-foreground link-with-animation">
+              <span className="text-secondary">Github</span>
+            </button>
+          </Link>
+          <Link href="https://www.linkedin.com/in/alexanderdphan/">
+            <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 text-muted-foreground link-with-animation">
+              <span className="text-secondary">LinkedIn</span>
+            </button>
+          </Link>
+          <Link href="mailto:alexphan0515@gmail.com">
+            <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 text-muted-foreground link-with-animation">
+              <span className="text-secondary">Email</span>
+            </button>
+          </Link>
+        </div>
+      </footer>
+    </div>
+  );
+}

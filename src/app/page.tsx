@@ -18,7 +18,7 @@ function Clock() {
 
   return (
     <time className="text-sm text-secondary">
-      <p className="inline">{time.toISOString().split('T')[0]}</p>{' '}
+      <p className="inline">{time.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).replace(/\//g, '-')}</p>{' '}
       <p className="inline">{String(time.getHours()).padStart(2, '0')}</p>
       <p className="inline">:</p>
       <p className="inline">{String(time.getMinutes()).padStart(2, '0')}</p>
